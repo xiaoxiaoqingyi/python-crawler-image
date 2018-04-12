@@ -9,30 +9,30 @@ from lxml import etree
 import MySQLdb
 
 STAR_URL = [
-            # 'http://www.manmankan.com/dy2013/mingxing/A/',
-			# 'http://www.manmankan.com/dy2013/mingxing/B/',
-			# 'http://www.manmankan.com/dy2013/mingxing/C/',
-			# 'http://www.manmankan.com/dy2013/mingxing/D/',
-			# 'http://www.manmankan.com/dy2013/mingxing/E/',
-			# 'http://www.manmankan.com/dy2013/mingxing/F/',
-			# 'http://www.manmankan.com/dy2013/mingxing/G/',
-			# 'http://www.manmankan.com/dy2013/mingxing/H/',
-			# 'http://www.manmankan.com/dy2013/mingxing/I/',
-			# 'http://www.manmankan.com/dy2013/mingxing/J/',
-			# 'http://www.manmankan.com/dy2013/mingxing/K/',
-			# 'http://www.manmankan.com/dy2013/mingxing/L/',
-			# 'http://www.manmankan.com/dy2013/mingxing/M/',
-			# 'http://www.manmankan.com/dy2013/mingxing/N/',
-			# 'http://www.manmankan.com/dy2013/mingxing/O/',
-			# 'http://www.manmankan.com/dy2013/mingxing/P/',
-			# 'http://www.manmankan.com/dy2013/mingxing/Q/',
-			# 'http://www.manmankan.com/dy2013/mingxing/R/',
-			# 'http://www.manmankan.com/dy2013/mingxing/S/',
-			# 'http://www.manmankan.com/dy2013/mingxing/T/',
-			# 'http://www.manmankan.com/dy2013/mingxing/U/',
-			# 'http://www.manmankan.com/dy2013/mingxing/V/',
-			# 'http://www.manmankan.com/dy2013/mingxing/W/',
-			# 'http://www.manmankan.com/dy2013/mingxing/X/',
+             'http://www.manmankan.com/dy2013/mingxing/A/',
+			 'http://www.manmankan.com/dy2013/mingxing/B/',
+			 'http://www.manmankan.com/dy2013/mingxing/C/',
+			 'http://www.manmankan.com/dy2013/mingxing/D/',
+			 'http://www.manmankan.com/dy2013/mingxing/E/',
+			 'http://www.manmankan.com/dy2013/mingxing/F/',
+			 'http://www.manmankan.com/dy2013/mingxing/G/',
+			 'http://www.manmankan.com/dy2013/mingxing/H/',
+			 'http://www.manmankan.com/dy2013/mingxing/I/',
+			 'http://www.manmankan.com/dy2013/mingxing/J/',
+			 'http://www.manmankan.com/dy2013/mingxing/K/',
+			 'http://www.manmankan.com/dy2013/mingxing/L/',
+			 'http://www.manmankan.com/dy2013/mingxing/M/',
+			 'http://www.manmankan.com/dy2013/mingxing/N/',
+			 'http://www.manmankan.com/dy2013/mingxing/O/',
+			 'http://www.manmankan.com/dy2013/mingxing/P/',
+			 'http://www.manmankan.com/dy2013/mingxing/Q/',
+			 'http://www.manmankan.com/dy2013/mingxing/R/',
+			 'http://www.manmankan.com/dy2013/mingxing/S/',
+			 'http://www.manmankan.com/dy2013/mingxing/T/',
+			 'http://www.manmankan.com/dy2013/mingxing/U/',
+			 'http://www.manmankan.com/dy2013/mingxing/V/',
+			 'http://www.manmankan.com/dy2013/mingxing/W/',
+			 'http://www.manmankan.com/dy2013/mingxing/X/',
 			 'http://www.manmankan.com/dy2013/mingxing/Y/',
 			 'http://www.manmankan.com/dy2013/mingxing/Z/'
 		   ]
@@ -72,8 +72,6 @@ def fetch_star(content, tag):
 	cursor = db.cursor()
 
 	html = etree.HTML(content)
-
-	
 	
 	starlist = html.xpath('//div[@class="i_cont"]//a')
 
